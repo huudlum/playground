@@ -10,17 +10,27 @@
             align-items: center; 
             justify-content: center; 
             height: 100vh; 
-            background-color: aqua;
+            background-color: var(--bg-color, #000000);
+            color: #ffffff;
             font-family: 'Courier New', Courier, monospace;">
 
     <div id="title" style="font-size: x-large; font-weight: bold;">What's the time in hex?</div>
-    <div id="time" style="font-size: xx-large; font-weight: bolder;"></div>    
+    <div id="timeDisplay" style="font-size: xx-large; font-weight: bolder;"></div>    
 </body>
 
 <script>
-    const time = document.getElementById('time');
     function updateTime() {
-        time.innerHTML = new Date().toLocaleTimeString();
+        const time = new Date();
+
+        hour = String(time.getHours());
+        minute = String(time.getMinutes());
+        second = String(time.getSeconds());
+
+        const timeHex = `#${hour}${minute}${second}`;
+
+        document.documentElement.style.setProperty('--bg-color', timeHex);
+
+        timeDisplay.innerHTML = `${hour}:${minute}:${second}`;
     }
     setInterval(function (){
         updateTime();;
