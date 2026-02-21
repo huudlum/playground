@@ -3,9 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Color Time</title>
 </head>
 <body>
+
+    <div id="time">
+    </div>
     
 </body>
+
+<script>
+    const time = document.getElementById('time');
+    function updateTime() {
+        time.innerHTML = new Date().toLocaleTimeString();
+    }
+    setInterval(function (){
+        updateTime();;
+    }, 1000);
+
+</script>
 </html>
