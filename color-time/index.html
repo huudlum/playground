@@ -3,13 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Color Time</title>
+    <title>What's the time in hex</title>
 </head>
-<body>
+<body style="display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            justify-content: center; 
+            height: 100vh; 
+            background-color: aqua;
+            font-family: 'Courier New', Courier, monospace;">
 
-    <div id="time">
-    </div>
-    
+    <div id="title" style="font-size: x-large; font-weight: bold;">What's the time in hex?</div>
+    <div id="time" style="font-size: xx-large; font-weight: bolder;"></div>    
 </body>
 
 <script>
@@ -20,6 +25,5 @@
     setInterval(function (){
         updateTime();;
     }, 1000);
-
 </script>
 </html>
