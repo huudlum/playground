@@ -3,19 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>What's the time in hex</title>
+    <title>What's the time in hexidecimal colour?</title>
 </head>
 <body style="display: flex; 
             flex-direction: column; 
             align-items: center; 
             justify-content: center; 
-            height: 100vh; 
+            height: 90vh; 
+            gap: 2rem;
             background-color: var(--bg-color, #000000);
             color: #ffffff;
             font-family: 'Courier New', Courier, monospace;">
 
-    <div id="title" style="font-size: x-large; font-weight: bold;">What's the time in hex?</div>
-    <div id="timeDisplay" style="font-size: xx-large; font-weight: bolder;"></div>    
+    <div id="title" style="font-size: 5vh; font-weight: bold; text-align: center;">What's the time in hexidecemal colour?</div>
+    <div id="timeDisplay" style="font-size: 7vh; font-weight: bolder;"></div>    
 </body>
 
 <script>
@@ -25,7 +26,6 @@
         hour = String(time.getHours()).padStart(2, '0');
         minute = String(time.getMinutes()).padStart(2, '0');
         second = String(time.getSeconds()).padStart(2, '0');
-    
 
         const timeHex = `#${hour}${minute}${second}`;
 
