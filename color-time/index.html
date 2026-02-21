@@ -22,9 +22,10 @@
     function updateTime() {
         const time = new Date();
 
-        hour = String(time.getHours());
-        minute = String(time.getMinutes());
-        second = String(time.getSeconds());
+        hour = String(time.getHours()).padStart(2, '0');
+        minute = String(time.getMinutes()).padStart(2, '0');
+        second = String(time.getSeconds()).padStart(2, '0');
+    
 
         const timeHex = `#${hour}${minute}${second}`;
 
