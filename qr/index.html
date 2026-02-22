@@ -1,0 +1,41 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scan-dalous</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="A QR Code generator" content="">
+
+</head>
+
+<body>
+<div class="container">
+  <h2>Scan-dalous </h2><br/> <h3> A QR Code Generator</h3>
+  <!--Text entry box that is added to the QR code generating API-->
+  <label>
+    <input type="text" placeholder="Enter text or URL" id="qrText">
+  </label>
+
+  <div id="qrBox">
+    <img src="" id="qrImg">
+  </div>
+
+  <!--Interactive buttons to generate the QR, download it and refresh the page. The bottom two buttons
+  only display upon generation-->
+  <button id="generateBtn" onclick="generateQR()">Generate QR Code</button>
+  <button id="downloadBtn"><a download="QR.png" id="qrDownload">Download</a></button>
+  <button id="refreshBtn" onclick="window.location.reload()">Start Again</button>
+
+</div>
+
+
+<!--Footer area with external links-->
+<footer class="footer"> Created by <a href="https://danhobbs.neocities.org"> Dan Hobbs</a></footer>
+
+<script src="app.js"></script>
+
+</body>
+
+</html>
